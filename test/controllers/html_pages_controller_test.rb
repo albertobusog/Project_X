@@ -4,10 +4,20 @@ class HtmlPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get html_pages_home_url
     assert_response :success
+    assert_select "title", "Home | Project_X"
   end
 
   test "should get help" do
     get html_pages_help_url
     assert_response :success
+    assert_select "title", "Help | Project_X"
   end
+
+  test "should get about" do 
+    get html_pages_about_url
+    assert_response :success
+    assert_select "title", "About | Project_X"
+  end
+
+
 end
