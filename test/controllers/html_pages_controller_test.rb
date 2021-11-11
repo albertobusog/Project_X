@@ -27,8 +27,8 @@ class HtmlPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get singup page" do
-    get singup_path
+    get signup_path
     assert_response :success
-    assert_select "title", "Singup | Project_X"
+    assert_select "title", "Signup | Project_X"
   end
 end

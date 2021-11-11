@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get '/help', to: 'html_pages#help'
   get '/about', to: 'html_pages#about'
   get '/contact', to: 'html_pages#contact'
-  get '/singup', to: 'users#new'
+  get '/signup', to: 'users#new'
+  resources :users
 end
